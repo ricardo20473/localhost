@@ -1,0 +1,13 @@
+html,body{
+	background: #D1D1D1;
+}
+
+.fondo{
+	background: #F7F7F7;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.linea{
+	border-bottom: 2px #BCBCBC solid;
+}
