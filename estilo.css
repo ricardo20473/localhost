@@ -1,11 +1,33 @@
 html,body{
-	background: #D1D1D1;
+	background: #eeeeee;
+	overflow-x: hidden;
+}
+
+.margin{
+	margin-right: -15px !important;
+	margin-left: -15px !important;
+	overflow-x: hidden;
+}
+
+.margen{
+	//margin-right: -15px !important;
+	margin-left: -15px !important;
 }
 
 .fondo{
-	background: #F7F7F7;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	background: #ffffff;
+	margin-right: -20px !important;
+	margin-left: -15px !important;
+	height: 100%;
+}
+
+.fondo2{
+	background: #222;
+	height: 100%;
+}
+
+.borde{
+	border-radius: 0px !important;
 }
 
 .linea{
