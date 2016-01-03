@@ -28,8 +28,15 @@ html,body{
 
 .borde{
 	border-radius: 0px !important;
+	background-color: #222 !important;
+    border: 1px solid #333 !important;
+}
+
+.borde:hover{
+	background-color: #d9d9d9 !important;
+	color: #000 !important;
 }
 
 .linea{
-	border-bottom: 2px #BCBCBC solid;
+	//border-bottom: 1px #444 solid;
 }

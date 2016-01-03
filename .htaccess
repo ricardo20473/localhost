@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{THE_REQUEST} \ /+localhost/
+	RewriteRule ^localhost/(.*)$ /$1 [L,R]
+	RewriteRule  ^$ localhost/    [L]
+	RewriteRule  (.*) localhost/$1 [L]
+</IfModule>
