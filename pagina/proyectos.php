@@ -34,7 +34,7 @@
 							if ($arreglo[$i][0] !='..' && $arreglo[$i][0] !='.' && $arreglo[$i][0] !='Index.php' && $arreglo[$i][0] !='Localhost' && $arreglo[$i][0] !='Phpmyadmin') {
 								echo "<tr>";
 								echo "<td>";
-								echo "<a href=".$arreglo[$i][1]." style='text-decoration: none;' target='_blank'><img src='localhost/carpeta.png' width='20' border='0'> &nbsp;<b>".$arreglo[$i][0]."</b></a>";
+								echo "<a href=".$arreglo[$i][1]." style='text-decoration: none;'><img src='localhost/carpeta.png' width='20' border='0'> &nbsp;<b>".$arreglo[$i][0]."</b></a>";
 								echo "</td>";
 								echo "</tr>";
 							}

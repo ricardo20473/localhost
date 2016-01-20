@@ -29,8 +29,8 @@
                <div class="col-md-2 fondo2">
                     <div class="list-group borde">
                         <a href="#" class="list-group-item active borde" style="background:#337ab7 !important"><b>Menu</b></a>
-                        <a href="localhost/info.php" class="list-group-item borde" target="_blank"><img src='localhost/icn-info.gif' width='24'> <b>phpinfo()</b></a>
-                        <a href="phpmyadmin/index.php" class="list-group-item borde" target="_blank"><img src='localhost/favicon.png' width='23'> <b>phpmyadmin</b></a>
+                        <a href="localhost/info.php" class="list-group-item borde" ><img src='localhost/icn-info.gif' width='24'> <b>phpinfo()</b></a>
+                        <a href="phpmyadmin/index.php" class="list-group-item borde"><img src='localhost/favicon.png' width='23'> <b>phpmyadmin</b></a>
                         <a href="#/" class="list-group-item borde"><img src='localhost/gear_24.png' height="24" width='24'> <b>Proyectos</b></a>
                         <a href="#/buscar" class="list-group-item borde"><img src='localhost/lupa.png' height="27" width='27'> <b>Buscar</b></a>
                     </div>
