@@ -1,24 +1,22 @@
 html,body{
 	background: #eeeeee;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
-.margin{
-	margin-right: -15px !important;
-	margin-left: -15px !important;
-	overflow-x: hidden;
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
-.margen{
-	//margin-right: -15px !important;
-	margin-left: -15px !important;
+.nav-pills > li > a {
+    border-radius: 0px !important;
+    border-bottom: 1px solid;
 }
 
 .fondo{
 	background: #ffffff;
-	margin-right: -20px !important;
-	margin-left: -15px !important;
 	height: 100%;
+	/*padding: 0px 20px!important;*/
 }
 
 .fondo2{
@@ -26,17 +24,38 @@ html,body{
 	height: 100%;
 }
 
-.borde{
-	border-radius: 0px !important;
-	background-color: #222 !important;
-    border: 1px solid #333 !important;
-}
-
-.borde:hover{
-	background-color: #d9d9d9 !important;
-	color: #000 !important;
-}
-
 .linea{
 	//border-bottom: 1px #444 solid;
+}
+
+.content{
+    background-color: #fff;   
+    border-top: 5px #528CC8 solid;
+}
+
+.content .title{
+    border-bottom: 1px #ccc solid;
+}
+
+.content .title h1{
+    /*font-size: 25px;*/
+    padding: 0px 15px;
+}
+
+.content .title h2{
+    font-size: 25px;
+    padding: 0px 15px;
+}
+
+.content .content-text{
+    /*padding: 20px;*/
+    text-align: justify;
+}
+
+span{
+	font-size: 25px !important;
+}
+
+b{
+	margin-left: 15px;
 }

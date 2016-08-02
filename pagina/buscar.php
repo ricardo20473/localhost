@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title></title>
-	</head>
-	<body>
-        <div class="">
-			<div class="col-md-12">
-				<h1>Buscar</h1>
-			</div>
-
+<div class="col-md-12">
+	<div class="content">
+		<div class="title">
+			<h1>Buscar</h1>
+		</div>
+		<div class="content-text">
 			<div class="col-md-4">
-				
+		
 			</div>
 			<div class="col-md-4">
 				<center>
@@ -27,7 +22,7 @@
 			<div class="col-md-4">
 				
 			</div>
-			<div class="row">
+			<div class="">
 				<div class="col-md-12">
 					<?php
 						$buscar = $_POST['buscar'];
@@ -56,5 +51,5 @@
 				</div>
 			</div>
 		</div>
-	</body>
-</html>
+	</div>
+</div>
