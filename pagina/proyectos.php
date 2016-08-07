@@ -15,7 +15,7 @@
 			closedir($directorio); 
 		?>
 		<div class="content-text" ng-init="directorio = <?php echo htmlspecialchars(json_encode($arreglo)); ?>">
-			<div  class="col-md-6">
+			<div  class="col-md-7">
 				<table class="table table-hover table-bordered" >
 					<tr>
 						<th class="center">
@@ -36,8 +36,8 @@
 							<a style='text-decoration: none;'><span class='fa fa-folder-open'></span> &nbsp;<b>{{dir[0]}}</b></a>
 						</td>
 						<td>
-							<a href="{{dir[1]}}" class="btn btn-default">Abrir</a>
-							<a href="{{dir[1]}}" target="_blank" class="btn btn-default">Abrir otra ventana</a>
+							<a href="{{dir[1]}}" class="btn btn-default btn-sm">Abrir</a>
+							<a href="{{dir[1]}}" target="_blank" class="btn btn-default btn-sm">Abrir otra ventana</a>
 						</td>
 					</tr>
 				</table>
@@ -49,7 +49,7 @@
 
             <div  class="col-md-1">
             </div>
-            <div  class="col-md-5">
+            <div  class="col-md-4">
             	<h3>Abiertos recientemente</h3>
             </div>
 		</div>
