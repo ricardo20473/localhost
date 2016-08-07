@@ -6,38 +6,52 @@
 		
 		<?php
 			$arreglo = array();
-			// echo "<table class='table '>\n";
 			$directorio = opendir("../.././");
 			while ($archivo = readdir($directorio))
 			   	{  
 					$nombreArch = ucwords($archivo);
 					$arreglo[] = array(0 => $nombreArch, 1 => $archivo);
-					//$nombreArch = str_replace("..", "Atras", $nombreArch);
-					// echo "<tr>\n<td>\n<a href='$archivo'>\n";
-					// echo "<img src='localhost/carpeta.png' width='20' alt='Ver $nombreArch'";
-					// echo " border=0>\n";
-					// echo "<b>&nbsp;$nombreArch</b></a></td>\n";
-					// echo "\n</tr>\n";
 				}
 			closedir($directorio); 
-			// echo "</table>\n";
 		?>
-		<div class="content-text">
-			<table class="table table-hover">
-				<?php
-					sort($arreglo);
-					for ($i=0; $i < count($arreglo) ; $i++) { 
-						if ($arreglo[$i][0] !='..' && $arreglo[$i][0] !='.' && $arreglo[$i][0] !='Index.php' && $arreglo[$i][0] !='Localhost' && $arreglo[$i][0] !='Phpmyadmin') {
-							echo "<tr>";
-							echo "<td>";
-							echo "<a href=".$arreglo[$i][1]." style='text-decoration: none;'><span class='fa fa-folder-open'></span> &nbsp;<b>".$arreglo[$i][0]."</b></a>";
-							echo "</td>";
-							echo "</tr>";
-						}
-					}
-					
-				?>
-			</table>
+		<div class="content-text" ng-init="directorio = <?php echo htmlspecialchars(json_encode($arreglo)); ?>">
+			<div  class="col-md-6">
+				<table class="table table-hover table-bordered" >
+					<tr>
+						<th class="center">
+							Num
+						</th>
+						<th>
+							Titulo
+						</th>
+						<th>
+							Acciones
+						</th>
+					</tr>
+					<tr dir-paginate="dir in arreglo | orderBy:'0' | filter:search | itemsPerPage:10" >
+						<td class="center">
+							{{$index+1}}
+						</td>
+						<td>
+							<a style='text-decoration: none;'><span class='fa fa-folder-open'></span> &nbsp;<b>{{dir[0]}}</b></a>
+						</td>
+						<td>
+							<a href="{{dir[1]}}" class="btn btn-default">Abrir</a>
+							<a href="{{dir[1]}}" target="_blank" class="btn btn-default">Abrir otra ventana</a>
+						</td>
+					</tr>
+				</table>
+			
+				<div class="col-md-6 pull-left" >
+	                <dir-pagination-controls max-size="10" direction-links="true" boundary-links="true" ></dir-pagination-controls>
+	            </div>
+            </div>
+
+            <div  class="col-md-1">
+            </div>
+            <div  class="col-md-5">
+            	<h3>Abiertos recientemente</h3>
+            </div>
 		</div>
 	</div>
 </div>

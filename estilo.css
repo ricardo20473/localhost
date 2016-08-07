@@ -10,7 +10,7 @@ html,body{
 
 .nav-pills > li > a {
     border-radius: 0px !important;
-    border-bottom: 1px solid;
+    /*border-bottom: 1px solid;*/
 }
 
 .fondo{
@@ -20,7 +20,7 @@ html,body{
 }
 
 .fondo2{
-	background: #222;
+	background: #444;
 	height: 100%;
 }
 
@@ -30,7 +30,7 @@ html,body{
 
 .content{
     background-color: #fff;   
-    border-top: 5px #528CC8 solid;
+    border-top: 5px #444 solid;
 }
 
 .content .title{
@@ -58,4 +58,16 @@ span{
 
 b{
 	margin-left: 15px;
+}
+
+a{
+    color: #ee6e73 !important;
+}
+
+.table {
+    margin-bottom: 0px !important;
+}
+
+.center{
+    text-align: center;
 }
