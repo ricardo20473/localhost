@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Localhost</title>
+        <link rel="shortcut icon" type="image/png" href="img/apache.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Integrando bootstrap 4 -->
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap_4/css/bootstrap-yeti.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.6.3/css/font-awesome.css">
+    </head>
+    <body>
+        <div class="container" id="app">
+            <div class="row">
+                <div class="col-md-3 menu">
+                    <div class="bar" style="background: #017ca5;">
+                        <center>
+                            <h3 style="font-weight: bold;">LOCALHOST</h3>
+                        </center>
+                    </div>
+                    <div class="title">
+                        <div class="title-img">
+                            <span class="fa fa-users"></span>
+                        </div>
+                    </div>
+                    <div class="list-group" style="font-size: 17px;">
+                        <a class="list-group-item  list-group-item-action active" style="color: #eee; font-weight: bold;">
+                            MENU
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <span class="fa fa-info-circle icon"> </span> phpinfo()
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <span class="fa fa-archive icon"> </span> phpmyadmin
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-9 content">
+                    <div class="bar" style="background: #008cba;">
+                        <form class="form-inline">
+                            <label class="sr-only" for="search">Search</label>
+                            <input type="text" class="form-control" id="search" placeholder="Buscar..." style="width: 300px;">
+                        </form>
+                    </div>
+                    <div class="">
+                        <table class="table table-hover">
+                            <tr>
+                                <td>Num</td>
+                                <td>Titulo</td>
+                                <td>Acciones</td>
+                            </tr>
+                            <tr v-for="file in files">
+                                <td></td>
+                                <td>{{file[0]}}</td>
+                                <td>
+                                    <div class="acciones">
+                                        <a href="{{file[1]}}"><span class="fa fa-eye"></span></a>
+                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integrando JQuery y bootstrap 4 -->
+        <script type="text/javascript" src="lib/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="lib/tether.js"></script>
+        <script type="text/javascript" src="lib/bootstrap_4/js/bootstrap.js"></script>
+        <script type="text/javascript" src="lib/vue.js"></script>
+        <script type="text/javascript" src="app/script.js"></script>
+    </body>
+</html>
