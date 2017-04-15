@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>Localhost</title>
-        <link rel="shortcut icon" type="image/png" href="img/apache.png">
+        <link rel="shortcut icon" type="image/png" href="localhost/img/apache.png">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Integrando bootstrap 4 -->
-        <link rel="stylesheet" type="text/css" href="lib/bootstrap_4/css/bootstrap-yeti.css">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.6.3/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="localhost/lib/bootstrap_4/css/bootstrap-yeti.css">
+        <link rel="stylesheet" type="text/css" href="localhost/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="localhost/lib/font-awesome-4.6.3/css/font-awesome.css">
     </head>
     <body>
         <div class="container" id="app">
@@ -29,10 +29,10 @@
                         <a class="list-group-item  list-group-item-action active" style="color: #eee; font-weight: bold;">
                             MENU
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="localhost/info.php" class="list-group-item list-group-item-action">
                             <span class="fa fa-info-circle icon"> </span> phpinfo()
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="phpmyadmin/index.php" class="list-group-item list-group-item-action">
                             <span class="fa fa-archive icon"> </span> phpmyadmin
                         </a>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="bar" style="background: #008cba;">
                         <form class="form-inline">
                             <label class="sr-only" for="search">Search</label>
-                            <input type="text" class="form-control" id="search" placeholder="Buscar..." style="width: 300px;">
+                            <input type="text" class="form-control"  v-model="buscar" id="search" placeholder="Buscar..." style="width: 300px;">
                         </form>
                     </div>
                     <div class="">
@@ -52,13 +52,13 @@
                                 <td>Titulo</td>
                                 <td>Acciones</td>
                             </tr>
-                            <tr v-for="file in files">
+                            <tr v-for="file in filter(files,buscar)">
                                 <td></td>
-                                <td>{{file[0]}}</td>
+                                <td>{{file}}</td>
                                 <td>
                                     <div class="acciones">
-                                        <a href="{{file[1]}}"><span class="fa fa-eye"></span></a>
-                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                        <a :href="file"><span class="fa fa-eye"></span></a>
+                                        <a href="#"  v-on:click="eliminar(file)"><span class="fa fa-trash-o"></span></a>
                                     </div>
                                 </td>
                             </tr>
