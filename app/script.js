@@ -13,7 +13,7 @@ var app = new Vue({
                     array = JSON.parse(data);
                     arreglo = [];
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i][0] !='..' && array[i][0] !='.' && array[i][0] !='index.php' && array[i][0] !='localhost' && array[i][0] !='phpmyadmin') {
+                        if (array[i][0] !='..' && array[i][0] !='.' && array[i][0] !='index.php' && array[i][0] !='localhost' && array[i][0] !='phpmyadmin' && array[i][0] !='index.html') {
                             arreglo.push(array[i][0]);
                         }
                     }
