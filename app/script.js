@@ -17,6 +17,8 @@ var app = new Vue({
                             arreglo.push(array[i][0]);
                         }
                     }
+
+                    arreglo.sort();
                     this.files = arreglo;
                 }.bind(this)
             });
